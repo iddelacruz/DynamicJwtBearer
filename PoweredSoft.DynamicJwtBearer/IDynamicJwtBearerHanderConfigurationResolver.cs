@@ -2,10 +2,9 @@
 using Microsoft.IdentityModel.Protocols.OpenIdConnect;
 using System.Threading.Tasks;
 
-namespace PoweredSoft.DynamicJwtBearer
+namespace PoweredSoft.DynamicJwtBearer;
+
+public interface IDynamicJwtBearerHanderConfigurationResolver
 {
-    public interface IDynamicJwtBearerHanderConfigurationResolver
-    {
-        Task<OpenIdConnectConfiguration> ResolveCurrentOpenIdConfiguration(HttpContext context);
-    }
+    Task<OpenIdConnectConfiguration> ResolveCurrentOpenIdConfiguration(HttpContext context);
 }

@@ -2,12 +2,11 @@
 using System;
 using System.Threading.Tasks;
 
-namespace PoweredSoft.DynamicJwtBearer.DynamicAuthority
-{
-    public interface IDynamicJwtBearerAuthorityResolver
-    {
-        public TimeSpan ExpirationOfConfiguration { get; }
+namespace PoweredSoft.DynamicJwtBearer.DynamicAuthority;
 
-        public Task<string> ResolveAuthority(HttpContext httpContext);
-    }
+public interface IDynamicJwtBearerAuthorityResolver
+{
+    public TimeSpan ExpirationOfConfiguration { get; }
+
+    public Task<string> ResolveAuthority(HttpContext httpContext);
 }
